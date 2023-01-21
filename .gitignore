@@ -1,0 +1,5 @@
+# Project exclude paths
+/LeetCode/.gradle/
+/LeetCode/build/
+/LeetCode/build/classes/java/main/
+/LeetCode/.idea
