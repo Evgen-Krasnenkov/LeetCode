@@ -1,3 +1,5 @@
+package com.algorithm;
+
 /**
  * https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/
  */
