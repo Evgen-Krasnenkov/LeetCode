@@ -30,7 +30,7 @@ public class SearchBinaryTree {
             return root;
         }
         else{
-            return val<root.data? searchBST(root.left,val):searchBST(root.right,val);
+            return val < root.data ? searchBST(root.left, val) : searchBST(root.right, val);
         }
     }
       public Node searchNode(Node temp, int value){

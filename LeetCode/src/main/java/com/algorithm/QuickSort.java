@@ -10,12 +10,12 @@ public class QuickSort {
             apply(array, pivotId + 1, end);
         }
     }
-    int partition(int[] array, int start, int end){
+    private int partition(int[] array, int start, int end){
         int pivot = array[start];
         int low = start + 1;
         int up = end;
-        boolean done = false;
-        while (!done){
+        boolean working = true;
+        while (working){
             while(low <= up && array[low] <= pivot){
                 low++;
             }
@@ -23,7 +23,7 @@ public class QuickSort {
                 up--;
             }
             if (up < low) {
-                done = true;
+                working = false;
             } else {
                 swap(array, up, low);
             }
