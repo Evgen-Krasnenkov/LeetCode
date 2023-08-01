@@ -11,16 +11,16 @@ package com.algorithm;
  * }
  **/
 public class ReverseSingleLinkedList {
-        public ListNode reverseList(ListNode head) {
-            if (head == null)
-                    return null;
-            ListNode newLast = new ListNode(head.val, null);
-            ListNode current = head.next;
-            while (current != null){
-                ListNode listNode = new ListNode(current.val, newLast);
-                newLast = listNode;
-                current = current.next;
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode newHead = null;
+        while (head != null) {
+            ListNode nextNode = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = nextNode;
         }
-            return newLast;
+        return newHead;
     }
 }
