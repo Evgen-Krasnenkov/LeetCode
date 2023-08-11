@@ -22,11 +22,12 @@ public class ReverseWordsInString {
 
     public String reverseWordsStream(String s) {
         String[] words = s.trim().split("\\s+");
-        String[] reverseOrder = new String[words.length];
-        for (int i = 0; i < words.length; i++) {
-            reverseOrder[words.length - i - 1] = words[i];
+        for (int i = 0; i < words.length / 2; i++) {
+            String temp = words[i];
+            words[i] = words[words.length - i - 1];
+            words[words.length - i - 1] = temp;
         }
-        String sentence = Arrays.stream(reverseOrder)
+        String sentence = Arrays.stream(words)
                 .collect(Collectors.joining(" "));
         return sentence;
     }
@@ -41,8 +42,12 @@ public class ReverseWordsInString {
 
     private String reverse(String word) {
         char[] characters = new char[word.length()];
-        for (int i = 0; i < word.length(); i++) {
+        if (word.length() % 2 != 0) {
+            characters[word.length() / 2] = word.charAt(word.length() / 2);
+        }
+        for (int i = 0; i < word.length() / 2; i++) {
             char charAt = word.charAt(i);
+            characters[i] = word.charAt(word.length() - i - 1);
             characters[word.length() - i - 1] = charAt;
         }
         return new String(characters);
