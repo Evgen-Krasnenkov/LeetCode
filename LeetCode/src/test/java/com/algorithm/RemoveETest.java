@@ -19,7 +19,16 @@ class RemoveETest {
         int[] nums = {0,1,2,2,3,0,4,2};
         int val = 2;
         int actual = removeE.removeElement(nums, val);
-        assertEquals(3, actual);
+        assertEquals(5, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void removeElementOptimal() {
+        RemoveE removeE = new RemoveE();
+        int[] nums = {0,1,2,2,2,3,0,4,2};
+        int val = 2;
+        int actual = removeE.removeElementOptimal(nums, val);
+        assertEquals(5, actual);
     }
 
 }
