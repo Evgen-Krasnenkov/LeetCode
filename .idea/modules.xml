@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LeetCode.iml" filepath="$PROJECT_DIR$/.idea/modules/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LeetCode.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LeetCode.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LeetCode.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LeetCode.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/LeetCode2023.iml" filepath="$PROJECT_DIR$/.idea/LeetCode2023.iml" />
     </modules>
   </component>
 </project>
