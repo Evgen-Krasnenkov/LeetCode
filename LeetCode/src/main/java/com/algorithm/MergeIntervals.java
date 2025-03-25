@@ -13,6 +13,8 @@ public class MergeIntervals {
     private static final int END = 1;
     private static final boolean PRESENT = true;
     public int[][] mergeSingle(int[][] intervals){
+        final int START = 0;
+        final int END = 1;
         if(intervals.length <= 1){
             return intervals;
         }
